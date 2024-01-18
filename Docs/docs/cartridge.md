@@ -38,3 +38,15 @@ The 2 cartridge slots use standard right-angle edge connectors, with 44-pins, an
 * `x` - Unconnected
 
 `ROM DISABLE` is a signal that, when pulled high by a cartridge in Slot 1, disables the OS ROM. A cart can choose to leave this signal permanently high, to completely replace the OS ROM, or it can instead choose to implement more complex address decoding logic, allowing both to coexist within the same slot.
+
+# Flash ROM Cart
+
+The flash cart uses a standard re-writable 39sf flash NOR chip, which are avaliable in sizes of 128KiB, 256KiB and 512KiB.
+
+# Serial Cart
+
+The serial cart allows communication between the KITTY and a modern computer via serial over USB, the KITTY is connected to a `16c550` UART, while the desktop is connected to a `MCP2221A` UART. The cart shares slot 1 with the **OS ROM**, being active/replacing it when **BANK** is `$40` or higher (bit 6 high)
+
+# RAM Cart
+
+The RAM cart provides either 128KiB or 512KiB of SRAM memory.
