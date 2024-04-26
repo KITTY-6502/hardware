@@ -9,5 +9,6 @@ nav:
   - Video: video.md
   - Audio: audio.md
   - Keyboard: keyboard.md
+  - Building: assembly.md
 # - A Sample Program: sample.md
 theme: readthedocs
