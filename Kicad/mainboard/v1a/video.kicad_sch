@@ -3970,7 +3970,7 @@
   (symbol (lib_id "Connector:DE15_Plug_HighDensity_MountingHoles") (at 34.29 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9b124cbf-f9bd-4cf0-9ede-1ef76d71196d)
-    (property "Reference" "J?" (at 34.29 88.9 0)
+    (property "Reference" "J7" (at 34.29 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DE15_Plug_HighDensity_MountingHoles" (at 34.29 91.44 0)
@@ -4001,7 +4001,7 @@
     (instances
       (project "v1a"
         (path "/82bc3382-6295-4121-a2db-2433a00f189b/08a65c83-f6b0-43c9-8af0-6a881bb0b65a"
-          (reference "J?") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )

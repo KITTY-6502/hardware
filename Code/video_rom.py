@@ -43,39 +43,79 @@ class Dot():
             
         return byte
           
-rom = []
-for i in range(0x4000):
-    rom.append(Dot())
 
-rom[48*312].reset = True
+def rom_pal():
+    rom = []
+    for i in range(0x4000):
+        rom.append(Dot())
 
-welp = 0
-for line in range(312):
-    rom[48*line].sync = True
-    rom[48*line+1].sync = True
-    
-    if line%39 == 0:
-        rom[48*line].fxtick = True
-    
-    if line > 23+10 and line < 280+10:
-        welp += 1
-        for dot in range(48*line+11,48*(line+1)-5):
-            rom[dot].pixel = True
-        for dot in range(48*line+10,48*(line+1)-5):
-            rom[dot].pixel_early = True
-            
-    if line == 280+10-1:
-        rom[48*line+42].irq = True
-            
-print(welp)
-for i in range(8):
-    for u in range(2):
-        y = i*2+u
-        p = (i+304)*48 + u * 24
-        rom[p].sync = True
-        if y >= 6 and y <= 10:
-            for dot in range(p,p+21):
-                rom[dot].sync = True
+    rom[48*312].reset = True
+
+    welp = 0
+    for line in range(312):
+        rom[48*line].sync = True
+        rom[48*line+1].sync = True
+        
+        if line%39 == 0:
+            rom[48*line].fxtick = True
+        
+        if line > 23+10 and line < 280+10:
+            welp += 1
+            for dot in range(48*line+11,48*(line+1)-5):
+                rom[dot].pixel = True
+            for dot in range(48*line+11,48*(line+1)-5):
+                rom[dot].pixel_early = True
+                
+        if line == 280+10-1:
+            rom[48*line+42].irq = True
+                
+    print(welp)
+    for i in range(8):
+        for u in range(2):
+            y = i*2+u
+            p = (i+304)*48 + u * 24
+            rom[p].sync = True
+            if y >= 6 and y <= 10:
+                for dot in range(p,p+21):
+                    rom[dot].sync = True
+    return rom
+def rom_ntsc():
+    rom = []
+    for i in range(0x4000):
+        rom.append(Dot())
+
+    rom[48*262].reset = True
+
+    welp = 0
+    for line in range(262):
+        rom[48*line].sync = True
+        rom[48*line+1].sync = True
+        
+        if line%39 == 0:
+            rom[48*line].fxtick = True
+        
+        if line > 23+10 and line < 216+10:
+            welp += 1
+            for dot in range(48*line+11,48*(line+1)-5):
+                rom[dot].pixel = True
+                rom[dot].pixel_early = True
+                
+        if line == 216+10-1:
+            rom[48*line+42].irq = True
+                
+    print(welp)
+    for i in range(8):
+        for u in range(2):
+            y = i*2+u
+            p = (i+262-8)*48 + u * 24
+            rom[p].sync = True
+            if y >= 6 and y <= 10:
+                for dot in range(p,p+21):
+                    rom[dot].sync = True
+    return rom
+
+rom = rom_pal() + rom_ntsc()
+print(len(rom))
 
 with open("video.bin","wb") as f:
     data = []

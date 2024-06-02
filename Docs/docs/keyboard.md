@@ -9,8 +9,8 @@ The keyboard can be read directly by the cpu through means of 5 Keyboard Row Reg
 
 | Address | Mode |  Description   | Format (bit 7-0)|
 |---------|------|----------------|----------------------------------|
-| `$7000` |  R   | Keyboard Row 1 | `O` `I` `U` `T` `R` `E` `W` `Esc`|
-| `$7010` |  R   | Keyboard Row 2 | `P` `K` `J` `Y` `G` `S` `Q` `Alt`|
-| `$7020` |  R   | Keyboard Row 3 | `Backspace` `L` `M` `H` `V` `D` `A` `Shift`|
-| `$7030` |  R   | Keyboard Row 4 | `Enter` `.` `|` `N` `B` `F` `Z` `Menu` |
-| `$7040` |  R   | Keyboard Row 5 | `→` `↓` `←` `↑` `Space` `C` `X` `Ctrl`|
+| `$7000` |  R   | Keyboard Row 1 | `Ctrl` `X` `C` `Space` `↑` `←` `↓` `→` |
+| `$7010` |  R   | Keyboard Row 2 | `Menu` `Z` `F` `B` `N` `|` `.` `Enter` |
+| `$7020` |  R   | Keyboard Row 3 | `Shift` `A` `D` `V` `H` `M` `L` `Backspace`|
+| `$7030` |  R   | Keyboard Row 4 | `Alt` `Q` `S` `G` `Y` `J` `K` `P`|
+| `$7040` |  R   | Keyboard Row 5 | `Esc` `W` `E` `R` `T` `U` `I` `O`|

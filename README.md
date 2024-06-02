@@ -15,6 +15,7 @@ Quick Specs:
 * **Output:** RGB PAL (50hz), via a SCART connector.
 
 **[Computer Manual](https://smaldragon.github.io/KITTY)**
+**[Schematic](Docs/schematics/v2a.pdf)**
 
 ![Picture of Prototype Board](Images/computer.jpg)
 ![Test Program](Images/display.jpg)

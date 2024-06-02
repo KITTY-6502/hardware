@@ -10,7 +10,7 @@ with Image.open("font.png") as im:
             row = 0
             for b in range(8):
                 c = 0
-                if im.getpixel((x*8+b,y)) == (255, 255, 255):
+                if im.getpixel((x*8+b,y)):
                     c = 1
                 row <<= 1
                 row += c

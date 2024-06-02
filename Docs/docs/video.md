@@ -8,10 +8,10 @@ The KITTY's video output is a text based display containing 32 by 32 tiles of 8 
 
 The data for the display is located directly in system ram:
 
-| Address |  Description       | Format                                |
-|---------|--------------------|---------------------------------------|
-| `$6800-$6BFF` | Display Color      | `%ffff_bbbb` **f**oreground and **b**ackground |
-| `$6C00-$6FFF` | Display Characters | `0-255` extended ascii character      |
+| Address |  Description             | Format                                |
+|---------|--------------------------|---------------------------------------|
+| `$6800-$6BFF` | Display Characters | `0-255` extended ascii character      |
+| `$6C00-$6FFF` | Display Color      | `%ffff_bbbb` **f**oreground and **b**ackground |
 
 ## Palette
 
