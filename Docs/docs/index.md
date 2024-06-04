@@ -30,3 +30,43 @@ Finally, all components, their values, and their general function within the cir
 * **INPUT** Custom 40-key mechanical keyboard 
 * **OUTPUT** SCART, using RGB progressive PAL @50.1hz
 * **POWER** 5v DC via a center positive barrel jack
+
+```
+    .--------------------.                          .----------------------.
+    | 64KiB Memory Space |                          |          I/O         |
+    |--------------------|                          |--------------+-------|
+    |                    | $0000                    | KEY 1        | $7000 |
+    |                    | $0800                    | KEY 2        | $7010 |
+    |                    | $1000                    | KEY 3        | $7020 |
+    |                    | $1800                    | KEY 4        | $7030 |
+    |                    | $2000                    | KEY 5        | $7040 |
+    |      WORK RAM      | $2800                    | BANK Register| $70D0 |
+    |       28KiB        | $3000                    | CH Freq 1    | $70E0 |
+    |                    | $3800                    | CH Freq 2    | $70E1 |
+    |                    | $4000                    | CH Freq 3    | $70E2 |
+    |                    | $4800                    | CH Control   | $70E3 |
+    |                    | $5000                    | CH Volume 1  | $70F0 |
+    |                    | $5800                    | CH Volume 2  | $70F1 |
+    |                    | $6000                    | CH Volume 3  | $70F2 |
+    |   (video memory)   | $6800                    | CH Volume 4  | $70F3 |
+    |--------------------| $7000                    | CH Waveform 1| $70F4 |
+    |        I/O         | $7800                    | CH Waveform 2| $70F5 |
+    |--------------------| $8000                    | CH Waveform 3| $70F6 |
+    |                    | $8800                    | CH Waveform 4| $70F7 |
+    |                    | $9000                    +--------------+-------+
+    |                    | $9800
+    |                    | $A000
+    |     CART SPACE     | $A800
+    |       32KiB        | $B000
+    |    (256 Banks)     | $B800
+    |                    | $C000
+    |                    | $C800
+    |                    | $D000
+    |                    | $D800
+    |                    | $E000
+    |                    | $E800
+    |                    | $F000
+    |                    | $F800
+    +--------------------+
+
+```
