@@ -1,0 +1,6 @@
+[submodule "Kicad/Kicad/keyboard/keyboard/gateron-ks27-stabalizers"]
+	path = Kicad/Kicad/keyboard/keyboard/gateron-ks27-stabalizers
+	url = https://github.com/Na-Cly/gateron-ks27-stabalizers.git
+[submodule "Kicad/Kicad/Kicad/keyboard/keyboard/gateron-ks27-stabalizers"]
+	path = Kicad/Kicad/Kicad/keyboard/keyboard/gateron-ks27-stabalizers
+	url = https://github.com/Na-Cly/gateron-ks27-stabalizers.git

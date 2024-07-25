@@ -5,7 +5,7 @@
 	(uuid "4045a201-392a-42f8-8951-9bd6e3c3090e")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Conn_01x05_Pin"
+		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -19,8 +19,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05_Pin"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x06_Pin"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -45,7 +45,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated"
+			(property "Description" "Generic connector, single row, 01x06, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -80,7 +80,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x05_Pin_1_1"
+			(symbol "Conn_01x06_Pin_1_1"
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 1.27 -5.08) (xy 0.8636 -5.08)
@@ -139,6 +151,17 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(rectangle
@@ -279,6 +302,24 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1210,6 +1251,102 @@
 				)
 			)
 		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 127.635 59.055)
@@ -1635,6 +1772,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 102.87) (xy 60.96 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09f7b76e-6116-4544-b090-22b6ec44628f")
+	)
+	(wire
+		(pts
 			(xy 207.01 78.74) (xy 207.01 93.345)
 		)
 		(stroke
@@ -1642,6 +1789,16 @@
 			(type default)
 		)
 		(uuid "15d88f20-d595-495c-8598-fc5aced6bfd0")
+	)
+	(wire
+		(pts
+			(xy 163.83 138.43) (xy 163.83 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16a31fc1-67ce-432b-a484-d70a34206264")
 	)
 	(wire
 		(pts
@@ -1745,6 +1902,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 105.41) (xy 59.69 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "372cb58c-d687-4722-8efc-9ab1d4bf1881")
+	)
+	(wire
+		(pts
 			(xy 105.41 73.66) (xy 127.635 73.66)
 		)
 		(stroke
@@ -1752,6 +1919,16 @@
 			(type default)
 		)
 		(uuid "383c6710-709d-4270-8393-4ce3beea913a")
+	)
+	(wire
+		(pts
+			(xy 57.15 73.66) (xy 60.96 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bcdfd58-4334-4137-8bac-bb57afdf436e")
 	)
 	(wire
 		(pts
@@ -1795,7 +1972,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 44.45) (xy 60.96 44.45)
+			(xy 53.34 46.99) (xy 54.61 46.99)
 		)
 		(stroke
 			(width 0)
@@ -1865,6 +2042,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 138.43) (xy 168.91 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5260559a-ed42-45fa-8342-d2cb75e328a1")
+	)
+	(wire
+		(pts
 			(xy 60.96 59.055) (xy 83.185 59.055)
 		)
 		(stroke
@@ -1875,13 +2062,33 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 88.265) (xy 60.96 88.265)
+			(xy 55.88 61.595) (xy 55.88 59.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "580197ff-0967-45a7-b42d-59eb4a4f3404")
+	)
+	(wire
+		(pts
+			(xy 53.34 90.805) (xy 58.42 90.805)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5a373a77-be8d-45d7-9e3c-6eb16a7e2eae")
+	)
+	(wire
+		(pts
+			(xy 55.88 59.055) (xy 60.96 59.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aaa4c0d-2445-444d-80f3-7c737bffc1f5")
 	)
 	(wire
 		(pts
@@ -1965,6 +2172,26 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 138.43) (xy 166.37 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c352425-c939-4575-b844-6856cb42e420")
+	)
+	(wire
+		(pts
+			(xy 54.61 44.45) (xy 60.96 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e6b6c14-28eb-42c0-9890-48499bf50c77")
+	)
+	(wire
+		(pts
 			(xy 83.185 44.45) (xy 105.41 44.45)
 		)
 		(stroke
@@ -1975,7 +2202,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 73.66) (xy 60.96 73.66)
+			(xy 53.34 76.2) (xy 57.15 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2025,6 +2252,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 76.2) (xy 57.15 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "860f1404-b5eb-4fd4-aafe-c91d2db2b575")
+	)
+	(wire
+		(pts
 			(xy 140.335 93.345) (xy 140.335 107.95)
 		)
 		(stroke
@@ -2062,6 +2299,26 @@
 			(type default)
 		)
 		(uuid "9271824b-fa3a-45ec-bee3-fe5659992e7c")
+	)
+	(wire
+		(pts
+			(xy 171.45 138.43) (xy 171.45 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932ec644-6e69-4a88-bccf-4f42471a85fc")
+	)
+	(wire
+		(pts
+			(xy 161.29 138.43) (xy 161.29 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d86386f-a74d-4423-b784-10f66233b0a6")
 	)
 	(wire
 		(pts
@@ -2125,7 +2382,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 59.055) (xy 60.96 59.055)
+			(xy 53.34 61.595) (xy 55.88 61.595)
 		)
 		(stroke
 			(width 0)
@@ -2155,6 +2412,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 46.99) (xy 54.61 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b11cb21f-8dfd-4e5a-a113-31e9b76f3f4d")
+	)
+	(wire
+		(pts
 			(xy 83.185 59.055) (xy 105.41 59.055)
 		)
 		(stroke
@@ -2172,6 +2439,16 @@
 			(type default)
 		)
 		(uuid "b36d9b1e-09d0-468b-962f-ae5fa74f51c7")
+	)
+	(wire
+		(pts
+			(xy 158.75 138.43) (xy 158.75 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b36f8ed9-520c-4381-b6bc-0d9be7687577")
 	)
 	(wire
 		(pts
@@ -2235,7 +2512,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 102.87) (xy 60.96 102.87)
+			(xy 53.34 105.41) (xy 59.69 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2345,6 +2622,26 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 138.43) (xy 173.99 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de970bca-d69d-42e0-968d-81d029fb7115")
+	)
+	(wire
+		(pts
+			(xy 58.42 88.265) (xy 60.96 88.265)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0fc1cba-8956-4650-ab29-0f0cc2fcdd36")
+	)
+	(wire
+		(pts
 			(xy 162.56 49.53) (xy 162.56 64.135)
 		)
 		(stroke
@@ -2365,6 +2662,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 90.805) (xy 58.42 88.265)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4a7d72a-2bba-458f-8768-c99be0ecd77a")
+	)
+	(wire
+		(pts
 			(xy 207.01 64.135) (xy 207.01 78.74)
 		)
 		(stroke
@@ -2382,6 +2689,16 @@
 			(type default)
 		)
 		(uuid "f5fb547b-db12-4d1a-8d17-617ea16a7d12")
+	)
+	(wire
+		(pts
+			(xy 176.53 138.43) (xy 176.53 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6030daa-f341-4d02-a07e-657bc573e978")
 	)
 	(wire
 		(pts
@@ -2414,7 +2731,7 @@
 		(uuid "fc294a4c-c47c-4411-b08e-2971eb68f71a")
 	)
 	(label "Col 4"
-		(at 166.37 135.89 270)
+		(at 166.37 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2425,7 +2742,7 @@
 		(uuid "07f49bfa-1f5e-4af4-8538-c6659bf06095")
 	)
 	(label "Col 5"
-		(at 184.785 113.03 270)
+		(at 118.11 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2436,18 +2753,18 @@
 		(uuid "0b6cfd46-eca5-477c-a98b-0bf88f08e8b9")
 	)
 	(label "Row 2"
-		(at 53.34 73.66 180)
+		(at 53.34 76.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "202c28d1-d29d-43b7-b573-7c637eecbf00")
 	)
 	(label "Col 2"
-		(at 171.45 135.89 270)
+		(at 171.45 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2458,7 +2775,7 @@
 		(uuid "23385a93-fc42-4c56-979b-758ac4abaa42")
 	)
 	(label "Col 3"
-		(at 140.335 113.03 270)
+		(at 162.56 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2469,7 +2786,7 @@
 		(uuid "2b06700a-9dd9-4f40-8c0a-9cd266824ea5")
 	)
 	(label "Col 0"
-		(at 73.66 113.03 270)
+		(at 229.235 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2480,7 +2797,7 @@
 		(uuid "2e362a25-36b6-4c18-8e5e-9ab56c1e9719")
 	)
 	(label "Col 5"
-		(at 163.83 135.89 270)
+		(at 163.83 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2491,7 +2808,7 @@
 		(uuid "304537d3-8459-4031-a50c-ade7240a67f8")
 	)
 	(label "Row 2"
-		(at 144.78 135.89 270)
+		(at 140.97 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2502,18 +2819,18 @@
 		(uuid "3e0cd583-02ec-4b3a-9f3a-0eb12947992c")
 	)
 	(label "Row 0"
-		(at 53.34 44.45 180)
+		(at 53.34 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "541cb88f-1e13-4d99-ae81-abef2b2cd70b")
 	)
 	(label "Row 4"
-		(at 139.7 135.89 270)
+		(at 146.05 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2524,7 +2841,7 @@
 		(uuid "669c5bcf-75b6-4543-8058-dc4cd9e56af4")
 	)
 	(label "Col 7"
-		(at 158.75 135.89 270)
+		(at 158.75 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2535,7 +2852,7 @@
 		(uuid "6969884a-220b-41ed-b732-f3b1f32e5fa6")
 	)
 	(label "Col 0"
-		(at 176.53 135.89 270)
+		(at 176.53 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2546,7 +2863,7 @@
 		(uuid "7680dc37-5dcf-41b8-92a0-4c744b189873")
 	)
 	(label "Col 1"
-		(at 173.99 135.89 270)
+		(at 173.99 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2557,18 +2874,18 @@
 		(uuid "8052628b-da84-4d25-b3ed-2bde793607d1")
 	)
 	(label "Row 1"
-		(at 53.34 59.055 180)
+		(at 53.34 90.805 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "89004fb5-c80e-45fa-8748-a1dc7d78b273")
 	)
 	(label "Col 7"
-		(at 229.235 113.03 270)
+		(at 73.66 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2579,18 +2896,18 @@
 		(uuid "98f289ee-9ccc-41e5-8cdd-627ef2727b70")
 	)
 	(label "Row 4"
-		(at 53.34 102.87 180)
+		(at 53.34 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "9dd35aeb-9835-4ba4-ab85-07ee201c1423")
 	)
 	(label "Row 0"
-		(at 149.86 135.89 270)
+		(at 135.89 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2601,7 +2918,7 @@
 		(uuid "a24f6947-f0cb-48e7-935e-4040a6a73fb5")
 	)
 	(label "Row 1"
-		(at 147.32 135.89 270)
+		(at 138.43 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2612,7 +2929,7 @@
 		(uuid "a34782e7-ac49-4e0e-b57b-d0d995a5b90c")
 	)
 	(label "Col 2"
-		(at 118.11 113.03 270)
+		(at 184.785 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2623,7 +2940,7 @@
 		(uuid "af263d40-ac04-4d3c-898b-18e69f206720")
 	)
 	(label "Col 4"
-		(at 162.56 113.03 270)
+		(at 140.335 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2634,7 +2951,7 @@
 		(uuid "b1c3e158-c03b-46d0-bde6-c54321e832bf")
 	)
 	(label "Col 6"
-		(at 207.01 113.03 270)
+		(at 95.885 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2645,7 +2962,7 @@
 		(uuid "cc6d0712-2860-4540-82b2-b09cdd1938bc")
 	)
 	(label "Col 1"
-		(at 95.885 113.03 270)
+		(at 207.01 113.03 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2656,7 +2973,7 @@
 		(uuid "d2a3e57a-56bd-4f35-99b7-e9b517d6bda0")
 	)
 	(label "Col 3"
-		(at 168.91 135.89 270)
+		(at 168.91 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2667,18 +2984,18 @@
 		(uuid "e2bf7246-c412-4481-b331-64de357e56dd")
 	)
 	(label "Row 3"
-		(at 53.34 88.265 180)
+		(at 53.34 61.595 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "e444c16d-3e6d-4e94-a8d4-34e71ec7c0db")
 	)
 	(label "Col 6"
-		(at 161.29 135.89 270)
+		(at 161.29 138.43 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2689,7 +3006,7 @@
 		(uuid "e7c3a335-f0b1-4f5b-9681-77b45e82b77b")
 	)
 	(label "Row 3"
-		(at 142.24 135.89 270)
+		(at 143.51 135.89 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2811,7 +3128,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 85.725 61.595 0)
 			(effects
 				(font
@@ -2879,7 +3196,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.25u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.25u"
 			(at 63.5 61.595 0)
 			(effects
 				(font
@@ -2947,7 +3264,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 152.4 46.99 0)
 			(effects
 				(font
@@ -3014,7 +3331,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 107.95 76.2 0)
 			(effects
 				(font
@@ -3339,7 +3656,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 130.175 90.805 0)
 			(effects
 				(font
@@ -3406,7 +3723,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 107.95 46.99 0)
 			(effects
 				(font
@@ -3473,7 +3790,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 196.85 76.2 0)
 			(effects
 				(font
@@ -3626,7 +3943,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 196.85 105.41 0)
 			(effects
 				(font
@@ -3780,7 +4097,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 174.625 76.2 0)
 			(effects
 				(font
@@ -4020,7 +4337,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 152.4 61.595 0)
 			(effects
 				(font
@@ -4088,7 +4405,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.25u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.50u"
 			(at 63.5 105.41 0)
 			(effects
 				(font
@@ -4328,7 +4645,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 219.075 61.595 0)
 			(effects
 				(font
@@ -4395,7 +4712,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 196.85 90.805 0)
 			(effects
 				(font
@@ -4463,7 +4780,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 85.725 46.99 0)
 			(effects
 				(font
@@ -4530,7 +4847,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 107.95 61.595 0)
 			(effects
 				(font
@@ -4684,7 +5001,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 85.725 90.805 0)
 			(effects
 				(font
@@ -4734,7 +5051,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "531c1659-e448-4ff1-a5e1-f6eaefc27c7b")
 		(property "Reference" "J2"
 			(at 167.64 126.365 90)
@@ -4837,7 +5153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 107.95 105.41 0)
 			(effects
 				(font
@@ -5079,7 +5395,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "KS27_PCB_STAB:ks26_6.25u_pcb_cherry_plate"
+		(property "Footprint" "ks27_pcb_stab:ks26_6.25u_pcb_cherry_plate"
 			(at 66.04 135.255 0)
 			(effects
 				(font
@@ -5227,7 +5543,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.75u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.75u"
 			(at 63.5 76.2 0)
 			(effects
 				(font
@@ -5467,7 +5783,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 152.4 105.41 0)
 			(effects
 				(font
@@ -5535,7 +5851,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 152.4 90.805 0)
 			(effects
 				(font
@@ -5603,7 +5919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 174.625 105.41 0)
 			(effects
 				(font
@@ -5756,7 +6072,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 130.175 61.595 0)
 			(effects
 				(font
@@ -6081,7 +6397,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 130.175 76.2 0)
 			(effects
 				(font
@@ -6296,6 +6612,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 133.35 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8bae5ed3-b285-4342-bb74-113fd3706ad8")
+		(property "Reference" "#PWR01"
+			(at 133.35 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 133.35 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 133.35 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4164aeff-b0dd-4f77-bfd9-771ae9b48c06")
+		)
+		(instances
+			(project ""
+				(path "/4045a201-392a-42f8-8951-9bd6e3c3090e"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 85.725 105.41 0)
 		(unit 1)
@@ -6321,7 +6703,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 85.725 105.41 0)
 			(effects
 				(font
@@ -6389,7 +6771,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 174.625 61.595 0)
 			(effects
 				(font
@@ -6456,7 +6838,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 196.85 46.99 0)
 			(effects
 				(font
@@ -6696,7 +7078,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 63.5 46.99 0)
 			(effects
 				(font
@@ -6850,7 +7232,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 85.725 76.2 0)
 			(effects
 				(font
@@ -6917,7 +7299,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 130.175 46.99 0)
 			(effects
 				(font
@@ -7040,6 +7422,86 @@
 			(project "keyboard"
 				(path "/4045a201-392a-42f8-8951-9bd6e3c3090e"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x06_Pin")
+		(at 140.97 130.81 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b32c5996-d8b4-4624-bfee-eba56640a2a7")
+		(property "Reference" "J1"
+			(at 139.7 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06_Pin"
+			(at 139.7 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+			(at 140.97 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 140.97 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "5c075877-9506-46d2-8f9b-461ae3c4d01f")
+		)
+		(pin "6"
+			(uuid "c8bebb8d-8ca2-444b-b795-f74ccbf5e48e")
+		)
+		(pin "5"
+			(uuid "8e13444a-72ae-4cb7-8a16-8b331669c1d9")
+		)
+		(pin "4"
+			(uuid "50d26ac3-ff09-4248-b954-f7531c3c9a96")
+		)
+		(pin "2"
+			(uuid "3cf11a64-cf0f-44ae-bc80-1b99e99221ab")
+		)
+		(pin "1"
+			(uuid "172cadea-f17e-4a7c-b2d7-16b069c42731")
+		)
+		(instances
+			(project ""
+				(path "/4045a201-392a-42f8-8951-9bd6e3c3090e"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7417,7 +7879,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "KS27_PCB_STAB:ks27_2u_pcb_cherry_plate_stab"
+		(property "Footprint" "ks27_pcb_stab:ks27_2u_pcb_cherry_plate_stab"
 			(at 98.425 135.255 0)
 			(effects
 				(font
@@ -7454,83 +7916,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x05_Pin")
-		(at 144.78 130.81 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c700a1dd-16a9-4da8-ab8a-4c3340daf045")
-		(property "Reference" "J1"
-			(at 144.78 126.365 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x05_Pin"
-			(at 144.78 128.905 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-			(at 144.78 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 144.78 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "c6df8b72-0e43-48ce-9cc5-1708954c581e")
-		)
-		(pin "1"
-			(uuid "dc5e3535-a031-4eec-9851-ad06089921ba")
-		)
-		(pin "5"
-			(uuid "b821fdb0-84bd-4561-8e8d-d25b07c66aae")
-		)
-		(pin "3"
-			(uuid "7e459a53-74cb-440f-a455-c9b1b1ddf9ae")
-		)
-		(pin "2"
-			(uuid "5ee24b78-590d-4350-9763-42e0863d42f1")
-		)
-		(instances
-			(project "keyboard"
-				(path "/4045a201-392a-42f8-8951-9bd6e3c3090e"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 196.85 61.595 0)
 		(unit 1)
@@ -7555,7 +7940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 196.85 61.595 0)
 			(effects
 				(font
@@ -7709,7 +8094,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_2.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_2.00u"
 			(at 219.075 90.805 0)
 			(effects
 				(font
@@ -7777,7 +8162,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 174.625 46.99 0)
 			(effects
 				(font
@@ -7844,7 +8229,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_6.25u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_6.25u"
 			(at 130.175 105.41 0)
 			(effects
 				(font
@@ -7998,7 +8383,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.75u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.50u"
 			(at 63.5 90.805 0)
 			(effects
 				(font
@@ -8410,7 +8795,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 152.4 76.2 0)
 			(effects
 				(font
@@ -8650,7 +9035,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 219.075 105.41 0)
 			(effects
 				(font
@@ -8718,7 +9103,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 219.075 46.99 0)
 			(effects
 				(font
@@ -8771,22 +9156,22 @@
 		(fields_autoplaced yes)
 		(uuid "faecd0b4-13de-4a54-ab79-28868e553f7c")
 		(property "Reference" "SW24"
-			(at 219.075 69.85 0)
+			(at 219.075 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "DELETE"
-			(at 219.075 72.39 0)
+		(property "Value" "BACK"
+			(at 219.075 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.25u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.25u"
 			(at 219.075 76.2 0)
 			(effects
 				(font
@@ -8939,7 +9324,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.00u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.00u"
 			(at 107.95 90.805 0)
 			(effects
 				(font
@@ -9007,7 +9392,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SMAL:SW_Redragon_LowProfile_PCB_1.50u"
+		(property "Footprint" "Smal:SW_Redragon_LowProfile_PCB_1.50u"
 			(at 174.625 90.805 0)
 			(effects
 				(font
