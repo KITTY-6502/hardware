@@ -4,42 +4,33 @@ rom_size = 512 * 1024
 class Dot():
     def __init__(self):
         self.reset  = False
-        self.sync   = False
         self.pixel  = False
         self.pixel_early = False
         self.irq    = False
         self.fxtick = False
+        self.sync   = False
+        self.hsync = False
+        self.vsync = False
         
     def to_byte(self):
         byte = 0
         if self.reset:
             byte += 0b0000_0001
-        else:
-            byte += 0b0001_0000
-        
         if self.fxtick:
             byte += 0b0000_0010
-        
-        if self.sync:
-            ...
-            #byte += 0b0000_0010
-        else:
-            byte += 0b0010_0000
-        
-        if self.pixel_early:
-            byte += 0b0000_0100
         if self.pixel:
-            ...
-            #byte += 0b0000_0100
-        else:
-            byte += 0b0100_0000
-            
-        if self.irq:
+            byte += 0b0000_0100
+        if not self.hsync:
             byte += 0b0000_1000
-        else:
+        
+        if not self.reset:
+            byte += 0b0001_0000
+        if not self.sync:
+            byte += 0b0010_0000
+        if not self.vsync:
+            byte += 0b0100_0000
+        if not self.irq:
             byte += 0b1000_0000
-            
-            
             
         return byte
           
@@ -52,12 +43,20 @@ def rom_pal():
     rom[48*312].reset = True
 
     welp = 0
+    for line in range(320):
+        rom[48*line].hsync = True
+        rom[48*line+1].hsync = True
+        if line > 304 and line <= 306:
+            for r in range(48):
+                rom[48*line+r].vsync = True
     for line in range(312):
         rom[48*line].sync = True
         rom[48*line+1].sync = True
         
         if line%39 == 0:
+            print(line)
             rom[48*line].fxtick = True
+            print("TICK",line)
         
         if line > 23+10 and line < 280+10:
             welp += 1
@@ -87,6 +86,12 @@ def rom_ntsc():
     rom[48*262].reset = True
 
     welp = 0
+    for line in range(262):
+        rom[48*line].hsync = True
+        rom[48*line+1].hsync = True
+        if line > 262-8 and line <= 262-6:
+            for r in range(48):
+                rom[48*line+r].vsync = True
     for line in range(262):
         rom[48*line].sync = True
         rom[48*line+1].sync = True
